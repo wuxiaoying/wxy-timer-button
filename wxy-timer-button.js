@@ -15,6 +15,7 @@
         this.raised = false;
         this.$.shadow.setZ(0);
       }
+      this.fire('start');
       this._StartTimer();
     },
     reset: function() {

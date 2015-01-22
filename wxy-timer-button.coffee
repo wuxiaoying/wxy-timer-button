@@ -16,6 +16,7 @@ Polymer
       @raised = false
       @$.shadow.setZ 0
 
+    @fire 'start'
     @_StartTimer()
     return
 
