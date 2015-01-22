@@ -1,1 +1,55 @@
 // out: wxy-timer-button.css
+
+@deep: ~'/deep/';
+
+:host {
+  display: inline-block;
+  background-color: #00bcd4;
+  position: relative;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 22px;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+  cursor: auto;
+}
+
+#ripple {
+  pointer-events: none;
+  z-index: -1;
+}
+
+#shadow {
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+html @{deep} paper-shadow::shadow #shadow-bottom[animated],
+html @{deep} paper-shadow::shadow #shadow-top[animated] {
+  transition: box-shadow 5.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#progress circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #00bcd4;
+  stroke-width: 10px;
+  fill: white;
+}
+
+#timer {
+  font-size: 100px;
+  font-weight: lighter;
+  color: #00bcd4;
+}
