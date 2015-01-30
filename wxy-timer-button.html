@@ -4,9 +4,7 @@
 <polymer-element name="wxy-timer-button" extends="paper-button-base" attributes="label time">
   <template>
     <link rel="stylesheet" href="wxy-timer-button.css">
-    <template if="{{raised}}">
       <paper-shadow id="shadow" z="{{z}}" fit animated></paper-shadow>
-    </template>
     <div>{{label}}</div>
     <template if={{!raised}}>
       <svg id="progress" width="{{width}}" height="{{width}}" fit>
