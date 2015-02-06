@@ -1,5 +1,5 @@
-<link rel="import" href="../../components/polymer/polymer.html">
-<link rel="import" href="../../components/paper-button/paper-button-base.html">
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button-base.html">
 
 <polymer-element name="wxy-timer-button" extends="paper-button-base" attributes="label time">
   <template>
@@ -12,13 +12,6 @@
       </svg>
       <div id="timer" fit horizontal layout center center-justified>{{time}}</div>
     </template>
-
-    <!--<paper-shadow id="button"
-      z="{{z}}"
-      on-tap="{{onTap}}"
-      vertical layout center center-justified animated>
-        <div>{{label}}</div>
-    </paper-shadow>-->
   </template>
   <script src="wxy-timer-button.js"></script>
 </polymer-element>
