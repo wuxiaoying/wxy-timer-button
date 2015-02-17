@@ -20,6 +20,14 @@ Polymer
     @_StartTimer()
     return
 
+  addTime: ->
+    @time += 15
+    return
+
+  subtractTime: ->
+    @time -= 15
+    return
+
   reset: ->
     @raised = true
     @$.shadow.setZ 3

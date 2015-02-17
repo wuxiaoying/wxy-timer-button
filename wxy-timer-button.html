@@ -1,5 +1,6 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../paper-button/paper-button-base.html">
+<link rel="import" href="../../components/polymer/polymer.html">
+<link rel="import" href="../../components/paper-button/paper-button-base.html">
+<link rel="import" href="../../components/paper-icon-button/paper-icon-button.html">
 
 <polymer-element name="wxy-timer-button" extends="paper-button-base" attributes="label time">
   <template>
@@ -10,8 +11,20 @@
       <svg id="progress" width="{{width}}" height="{{width}}" fit>
         <circle r="{{radius}}" cx="{{center}}" cy="{{center}}"></circle>
       </svg>
-      <div id="timer" fit horizontal layout center center-justified>{{time}}</div>
+        <div id="timer" fit horizontal layout center center-justified>
+          <paper-icon-button icon="remove" on-tap="{{subtractTime}}"></paper-icon-button>
+          {{time}}
+          <paper-icon-button icon="add" on-tap="{{addTime}}"></paper-icon-button>
+        </div>
+      </div>
     </template>
+
+    <!--<paper-shadow id="button"
+      z="{{z}}"
+      on-tap="{{onTap}}"
+      vertical layout center center-justified animated>
+        <div>{{label}}</div>
+    </paper-shadow>-->
   </template>
   <script src="wxy-timer-button.js"></script>
 </polymer-element>

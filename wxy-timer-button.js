@@ -18,6 +18,12 @@
       this.fire('start');
       this._StartTimer();
     },
+    addTime: function() {
+      this.time += 15;
+    },
+    subtractTime: function() {
+      this.time -= 15;
+    },
     reset: function() {
       this.raised = true;
       this.$.shadow.setZ(3);

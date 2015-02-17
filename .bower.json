@@ -1,0 +1,13 @@
+{
+  "name": "wxy-timer-button",
+  "homepage": "https://github.com/wuxiaoying/wxy-timer-button",
+  "_release": "fc299c010f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fc299c010f83dd807a91c44323ae712dd5505728"
+  },
+  "_source": "git://github.com/wuxiaoying/wxy-timer-button.git",
+  "_target": "*",
+  "_originalSource": "wxy-timer-button"
+}
