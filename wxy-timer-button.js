@@ -11,7 +11,9 @@
       this.center = this.width / 2;
     },
     onTap: function() {
-      if (this.raised) {
+      if (!this.raised) {
+        return;
+      } else {
         this.raised = false;
         this.$.shadow.setZ(0);
       }

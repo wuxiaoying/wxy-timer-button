@@ -12,7 +12,9 @@ Polymer
     return
 
   onTap: ->
-    if @raised
+    if !@raised
+      return
+    else
       @raised = false
       @$.shadow.setZ 0
 
