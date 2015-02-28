@@ -28,6 +28,7 @@ Polymer
 
   subtractTime: ->
     @time -= 15
+    @time = 0 if @time < 0
     return
 
   reset: ->
@@ -39,6 +40,7 @@ Polymer
     if @time > 0
       @job 'time', ->
         @time--
+        @time = 0 if @time < 0
         @_StartTimer()
         return
       , 1000

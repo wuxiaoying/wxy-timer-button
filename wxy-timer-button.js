@@ -25,6 +25,9 @@
     },
     subtractTime: function() {
       this.time -= 15;
+      if (this.time < 0) {
+        this.time = 0;
+      }
     },
     reset: function() {
       this.raised = true;
@@ -34,6 +37,9 @@
       if (this.time > 0) {
         this.job('time', function() {
           this.time--;
+          if (this.time < 0) {
+            this.time = 0;
+          }
           this._StartTimer();
         }, 1000);
       } else {
