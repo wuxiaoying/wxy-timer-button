@@ -6,11 +6,12 @@
       tap: 'onTap'
     },
     attached: function() {
-      this.width = this.clientWidth;
-      this.radius = this.width / 2 - 5;
-      this.center = this.width / 2;
+      this._CalculateWidth();
     },
     onTap: function() {
+      if (this.width === 0) {
+        this._CalculateWidth();
+      }
       if (!this.raised) {
         return;
       } else {
@@ -25,6 +26,9 @@
     },
     subtractTime: function() {
       this.time -= 15;
+      if (this.time < 0) {
+        this.time = 0;
+      }
     },
     reset: function() {
       this.raised = true;
@@ -34,11 +38,19 @@
       if (this.time > 0) {
         this.job('time', function() {
           this.time--;
+          if (this.time < 0) {
+            this.time = 0;
+          }
           this._StartTimer();
         }, 1000);
       } else {
         this.fire('complete');
       }
+    },
+    _CalculateWidth: function() {
+      this.width = this.clientWidth;
+      this.radius = this.width / 2 - 5;
+      this.center = this.width / 2;
     }
   });
 

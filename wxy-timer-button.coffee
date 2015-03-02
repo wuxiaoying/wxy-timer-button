@@ -6,12 +6,12 @@ Polymer
     tap: 'onTap'
 
   attached: ->
-    @width = @clientWidth
-    @radius = @width / 2 - 5
-    @center = @width / 2
+    @_CalculateWidth()
     return
 
   onTap: ->
+    if @width == 0
+      @_CalculateWidth()
     if !@raised
       return
     else
@@ -28,6 +28,7 @@ Polymer
 
   subtractTime: ->
     @time -= 15
+    @time = 0 if @time < 0
     return
 
   reset: ->
@@ -39,10 +40,17 @@ Polymer
     if @time > 0
       @job 'time', ->
         @time--
+        @time = 0 if @time < 0
         @_StartTimer()
         return
       , 1000
     else
       @fire 'complete'
 
+    return
+
+  _CalculateWidth: ->
+    @width = @clientWidth
+    @radius = @width / 2 - 5
+    @center = @width / 2
     return

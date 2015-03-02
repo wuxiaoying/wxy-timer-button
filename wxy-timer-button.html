@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="wxy-timer-button.css">
       <paper-shadow id="shadow" z="{{z}}" fit animated></paper-shadow>
     <div>{{label}}</div>
-    <template if={{!raised}}>
+    <template bind if="{{!raised}}">
       <svg id="progress" width="{{width}}" height="{{width}}" fit>
         <circle r="{{radius}}" cx="{{center}}" cy="{{center}}"></circle>
       </svg>

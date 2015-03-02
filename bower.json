@@ -1,6 +1,7 @@
 {
   "name": "wxy-timer-button",
   "main": "wxy-timer-button.html",
+  "version": "0.0.0",
   "homepage": "https://github.com/wuxiaoying/wxy-timer-button",
   "authors": [
     "helenxywu <xiaoyingw12@gmail.com>"
@@ -16,14 +17,5 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.5.2"
-  },
-  "_release": "a70980af60",
-  "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "a70980af607eacd46f9b183f2eb7257b4c5c8e95"
-  },
-  "_source": "git://github.com/wuxiaoying/wxy-timer-button.git",
-  "_target": "*",
-  "_originalSource": "wxy-timer-button"
+  }
 }
